@@ -1,0 +1,45 @@
+(1) Приведите 5-10 типовых бизнес-процессов для любой предметной области (кроме интернет-магазина), а также их соответствие по CRUD.
+
+Стриминговый сервис 
+Регистрация пользователя - Create
+Выбор подписки - Create
+Оплата подписки  - Update
+Поиск фильмов/сериалов/.. - Read
+Просмотр фильмов/сериалов/... - Read
+Добавдения фильма в избранное - Create
+Добавить оценку фильму - Update (потому что обновляется общий рейтинг)
+Оставить отзыв - Create
+Удаления из избранного - Update
+
+
+В рамках БД "песочница"
+(2) Вывести название и стоимость товаров от 20 EUR.
+
+SELECT ProductName, Price
+FROM [Products]
+WHERE Price>=20
+
+(3) Вывести самый дорогой товар из категорий 5 и 8.
+
+SELECT *
+FROM Products
+WHERE CategoryID=8 OR CategoryID=5
+ORDER BY Price DESC
+LIMIT 2
+
+(4) Вывести название и стоимость самого дешевого товара в USD.
+
+SELECT 
+	ProductName,
+	Price * 1.09 AS Price_usd
+FROM Products
+ORDER BY Price ASC
+LIMIT 1
+
+(5) Вывести имена клиентов, кроме тех, что из UK и USA.
+
+SELECT CustomerName 
+FROM [Customers]
+WHERE NOT Country="UK" AND NOT Country="USA"
+
+
