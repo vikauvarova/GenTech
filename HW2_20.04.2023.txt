@@ -9,4 +9,4 @@ WHERE Country IN ('USA', 'China')
 
 UPDATE Products
 SET Price=10
-WHERE Price>20 AND CategoryID=''
+WHERE Price>20 AND CategoryID=null
