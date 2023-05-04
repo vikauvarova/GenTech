@@ -13,7 +13,7 @@
 SELECT * 
 FROM Orders
 JOIN Customers ON Orders.CustomerID=Customers.CustomerID
-WHERE Country="USA"
+WHERE Country!="USA"
 
 (3) К товарам от 50 до 90 EUR применить постоянную скидку в 10%.
 
