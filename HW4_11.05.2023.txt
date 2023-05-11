@@ -7,7 +7,7 @@ COUNT(*) AS total_products
 FROM Products
 JOIN Suppliers ON Suppliers.SupplierID=Products.SupplierID
 
-GROUP BY SupplierName 
+GROUP BY Suppliers.SupplierID 
 ORDER BY total_products DESC
 
 
@@ -20,7 +20,7 @@ COUNT(*) AS total
 FROM Products
 JOIN Categories ON Products.CategoryID=Categories.CategoryID
 
-GROUP BY CategoryName
+GROUP BY Categories.CategoryID
 ORDER BY total DESC
 LIMIT 1
 
