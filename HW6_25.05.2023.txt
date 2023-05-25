@@ -2,6 +2,22 @@
 
 https://dbdiagram.io/d/646f9a287764f72fcfda7327
 
+table timetable {
+  lesson_id int [pk, increment]
+  lesson_start timestamp 
+  lesson_finish timestamp
+  teacher_id int 
+  group_id int
+
+}
+
+table teachers {
+  teacher_id int 
+  created_at timestamp
+  fullname varchar(64)
+  email varchar(64)
+}
+
 Вывести имена студентов и названия групп, в которых они состоят
 
 SELECT students.fullname, groups.name
