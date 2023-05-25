@@ -1,0 +1,10 @@
+Опишите схему таблицу "расписание занятий" и "преподаватели"
+
+https://dbdiagram.io/d/646f9a287764f72fcfda7327
+
+Вывести имена студентов и названия групп, в которых они состоят
+
+SELECT students.fullname, groups.name
+FROM students_attachments
+JOIN groups ON students_attachments.group_id=groups.group_id
+JOIN students ON students_attachments.student_id=students.student_id
